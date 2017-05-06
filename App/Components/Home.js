@@ -10,6 +10,7 @@ import {
 import ExaminationQuestion from './ExaminationQuestion'
 import {list as examinationTemplateList} from '../Lib/ExaminationTemplate'
 import {list as examinationList} from '../Lib/Examination'
+import {clone} from '../Lib/Cloner'
 
 const styles = StyleSheet.create({
   container: {
@@ -72,7 +73,7 @@ export default class Home extends Component {
           renderRow={(rowData) => (
             <Button
               onPress={(state)=>{
-                this.props.onExaminationChange(rowData)
+                this.props.onExaminationChange(clone(rowData))
               }}
               title={rowData.name}
               accessibilityLabel="Learn more about this purple button"
