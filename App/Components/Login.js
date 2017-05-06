@@ -8,28 +8,20 @@ import {
   TextInput
 } from 'react-native';
 
-import {
-  list
-} from "../Lib/ExaminationTemplate";
 
 export default class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
       pin: '',
-      pinSet: false
     };
     this.handlePinTextInputChange = this.handlePinTextInputChange.bind(this);
-    this.props.onLoginChange(true);
-    list().then(result => {
-      console.log(result);
-    });
   }
   handlePinTextInputChange(text) {
     this.setState({
       pin: text
     });
-    if (text === "1234") {
+    if (text === this.props.pinSet) {
       this.props.onLoginChange(true);
     }
   }
@@ -38,6 +30,7 @@ export default class Login extends Component {
       <View style={styles.container}>
         <Image source={require('./../Img/mea-culp-logo-1024.png')} style={{width: 200, height: 200}}/>
         <TextInput
+          autoFocus={true}
           keyboardType="numeric"
           style={{width: 100, height: 40, textAlign: "center"/*, borderBottomColor: 'black', borderBottomWidth: 1*/}}
           value={this.state.pin}

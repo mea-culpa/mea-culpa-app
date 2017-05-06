@@ -7,6 +7,8 @@ import {
   Button,
   ToastAndroid
 } from 'react-native';
+import moment from 'moment';
+
 import ExaminationQuestion from './ExaminationQuestion'
 import {list as examinationTemplateList} from '../Lib/ExaminationTemplate'
 import {list as examinationList} from '../Lib/Examination'
@@ -62,6 +64,10 @@ export default class Home extends Component {
     this.setState({examination: data})
   }
 
+  handleDate(filename){
+    return moment(parseInt(filename.split("_")[1].split(".")[0])).format("YYYY-MM-DD hh:mm:ss")
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -76,6 +82,7 @@ export default class Home extends Component {
                 this.props.onExaminationChange(clone(rowData))
               }}
               title={rowData.name}
+              color="black"
               accessibilityLabel="Learn more about this purple button"
             />
             )}
@@ -90,11 +97,16 @@ export default class Home extends Component {
               onPress={()=>{
                 this.props.onExaminationChange(rowData)
               }}
-              title={`${rowData.name}`}
+              title={`${rowData.name} \n ${(rowData.filename)?this.handleDate(rowData.filename):''}`}
+              color="black"
               accessibilityLabel="Learn more about this purple button"
             />
             )}
           />
+        <Button
+          title="Zresetuj PIN"
+          onPress={this.props.onPinReset}
+        ></Button>
       </View>
     )
   }

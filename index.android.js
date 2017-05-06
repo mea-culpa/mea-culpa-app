@@ -17,14 +17,22 @@ import {
 import Login from "./App/Components/Login";
 import Home from "./App/Components/Home";
 import Examination from "./App/Components/Examination"
+import PinSet from "./App/Components/PinSet"
+
+import {
+  remove
+} from "./App/Lib/Pin";
 
 export default class MeaCulpa extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      pin: null,
       logged: false,
       examination: null
     };
+    this.handlePinChange = this.handlePinChange.bind(this);
+    this.handlePinReset = this.handlePinReset.bind(this);
     this.handleLoginChange = this.handleLoginChange.bind(this);
     this.handleExaminationChange = this.handleExaminationChange.bind(this);
 
@@ -44,6 +52,11 @@ export default class MeaCulpa extends Component {
       return false;
     });
   }
+  handlePinChange(pin) {
+    this.setState({
+      pin
+    });
+  }
   handleLoginChange(logged) {
     this.setState({
       logged
@@ -54,10 +67,25 @@ export default class MeaCulpa extends Component {
       examination
     });
   }
+  handlePinReset() {
+    remove()
+      .then(() => {
+        this.setState({ pin: '' });
+      });
+  }
   render() {
+    if (!this.state.pin) {
+      return (
+        <PinSet
+          onPinChange={this.handlePinChange}
+        ></PinSet>
+      );
+    }
+
     if (!this.state.logged) {
       return (
         <Login
+          pinSet={this.state.pin}
           onLoginChange={this.handleLoginChange}
         ></Login>
       );
@@ -66,6 +94,7 @@ export default class MeaCulpa extends Component {
     if (this.state.examination) {
       return (
         <Examination
+          pinSet={this.state.pin}
           examination={this.state.examination}
           onExaminationChange={this.handleExaminationChange}
         ></Examination>
@@ -74,6 +103,8 @@ export default class MeaCulpa extends Component {
 
     return (
       <Home
+        pinSet={this.state.pin}
+        onPinReset={this.handlePinReset}
         onExaminationChange={this.handleExaminationChange}
       ></Home>
     );

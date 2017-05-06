@@ -24,7 +24,7 @@ export default class ExaminationQuestion extends Component {
     this.setState((state) => {
       let newQuestion = state.question;
       newQuestion.notes = text
-    this.props.onQuestionUpdate(this.props.key, newQuestion);
+      this.props.onQuestionUpdate(this.key, newQuestion);
       return {
         question: newQuestion,
       };
@@ -35,7 +35,7 @@ export default class ExaminationQuestion extends Component {
     this.setState((state) => {
       let newQuestion = state.question;
       newQuestion.sin = sin;
-      this.props.onQuestionUpdate(this.props.key, newQuestion);
+      this.props.onQuestionUpdate(this.key, newQuestion);
       return{
         question: newQuestion,
       };
