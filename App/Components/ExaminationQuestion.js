@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {
   View,
+  KeyboardAvoidingView,
   Text,
   Button,
   Image,
@@ -8,6 +9,7 @@ import {
   StyleSheet,
   TouchableHighlight
 } from 'react-native';
+
 
 
 export default class ExaminationQuestion extends Component {
@@ -42,39 +44,48 @@ export default class ExaminationQuestion extends Component {
 
   render() {
     return (
-      <View>
-        <Text style={styles.category}>{this.state.question.category}</Text>
-        <Text style={styles.description}>{this.state.question.description}</Text>
-        <Text style={styles.question}>{this.state.question.name}</Text>
-
         <View style={{
-          flex: 0,
-          flexDirection: 'row',
+          flex: 1,
+          flexDirection: 'column',
           justifyContent: 'space-around',
         }}>
-          <TouchableHighlight onPress={() => this.setSin(true)}>
-            <Image source={require('./../Img/devil.png')}
-              style={this.state.question.sin ? [styles.icon, styles.iconActive] : styles.icon} />
-          </TouchableHighlight>
-          <TouchableHighlight onPress={() => this.setSin(false)}>
-            <Image source={require('./../Img/angel.png')}
-              style={this.state.question.sin ? styles.icon : [styles.icon, styles.iconActive]} />
-          </TouchableHighlight>
+          <Text style={styles.category}>{this.state.question.category}</Text>
+          <Text style={styles.description}>{this.state.question.description}</Text>
+          <Text style={styles.question}>{this.state.question.name}</Text>
+
+          <View style={{
+            flex: 0,
+            flexDirection: 'row',
+            justifyContent: 'space-around',
+          }}>
+            <TouchableHighlight onPress={() => this.setSin(true)}>
+              <Image source={require('./../Img/devil.png')}
+                style={this.state.question.sin ? [styles.icon, styles.iconActive] : styles.icon} />
+            </TouchableHighlight>
+            <TouchableHighlight onPress={() => this.setSin(false)}>
+              <Image source={require('./../Img/angel.png')}
+                style={this.state.question.sin ? styles.icon : [styles.icon, styles.iconActive]} />
+            </TouchableHighlight>
+          </View>
+
+          <KeyboardAvoidingView
+            behavior='padding'>
+            <TextInput
+              defaultValue={this.state.question.notes}
+              onChangeText={(text) => this.updateNotes(text)}
+              multiline={true}
+              numberOfLines={5}
+              style={{
+                margin: 10,
+                marginBottom: 30,
+                borderWidth: 0.5,
+                borderColor: '#0f0f0f',
+              }}
+            />
+
+          </KeyboardAvoidingView>
+
         </View>
-
-        <TextInput
-          defaultValue={this.state.question.notes}
-          onChangeText={(text) => this.updateNotes(text)}
-          multiline={true}
-          numberOfLines={10}
-          style={{
-            margin: 10,
-            borderWidth: 0.5,
-            borderColor: '#0f0f0f',
-          }}
-        />
-
-      </View>
     );
   }
 }

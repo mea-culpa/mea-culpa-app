@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { ListView, Alert, Text, View, TouchableHighlight } from 'react-native'
+import { ListView, Alert, Text, View, TouchableHighlight, Keyboard } from 'react-native'
 // import _ from "lodash";
 
 import Swiper from 'react-native-swiper';
@@ -27,30 +27,18 @@ export default class Examinaton extends Component {
     const questions = this.props.examination.questions;
     const elems = questions.map((question, key) => {
       return (
-        <View style={{
-          flex: 1,
-          flexDirection: 'column',
-          justifyContent: 'space-around',
-        }}>
           <ExaminationQuestion
             key={key}
             question={question}
             onQuestionUpdate={() => { this.handleQuestionUpdate(key, question) }}
           ></ExaminationQuestion>
-        </View>
       );
     });
 
     elems.push((
-      <View style={{
-        flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'space-around',
-      }}>
         <ExaminationSummary
           examination={this.props.examinaton}
         ></ExaminationSummary>
-      </View>
     ));
     return elems;
   }
@@ -60,6 +48,8 @@ export default class Examinaton extends Component {
       <Swiper
         loop={false}
         showsButtons={true}
+        onTouchStart={Keyboard.dismiss}
+        onMomentumScrollEnd={Keyboard.dismiss}
       >
         {this.renderQuestions()}
       </Swiper>
@@ -67,6 +57,6 @@ export default class Examinaton extends Component {
   }
   componentDidUpdate() {
     // write to file
-    Alert.alert("update", JSON.stringify(this.props.examination));
+    // Alert.alert("update", JSON.stringify(this.props.examination));
   }
 }
