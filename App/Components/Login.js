@@ -8,13 +8,22 @@ import {
   TextInput
 } from 'react-native';
 
+import {
+  list
+} from "../Lib/ExaminationTemplate";
+
 export default class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
       pin: '',
+      pinSet: false
     };
     this.handlePinTextInputChange = this.handlePinTextInputChange.bind(this);
+
+    list().then(result => {
+      console.log(result);
+    });
   }
   handlePinTextInputChange(text) {
     this.setState({
@@ -28,6 +37,7 @@ export default class Login extends Component {
     let pic = {
       uri: 'https://github.com/mea-culpa/mea-culpa-visuals/raw/master/logo/mea-culp-logo-1024.png'
     };
+
     return (
       <View style={styles.container}>
         <Image source={pic} style={{width: 200, height: 200}}/>
