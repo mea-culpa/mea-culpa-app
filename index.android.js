@@ -20,26 +20,35 @@ export default class MeaCulpa extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      logged: false
+      logged: false,
+      examination: null
     };
     this.handleLoginChange = this.handleLoginChange.bind(this);
+    this.handleExaminationChange = this.handleExaminationChange.bind(this);
   }
   handleLoginChange(logged) {
     this.setState({
       logged
     });
   }
+  handleExaminationChange(examination) {
+    this.setState({
+      examination
+    });
+  }
   render() {
-    if (this.state.logged) {
+    if (!this.state.logged) {
       return (
-        <Home></Home>
+        <Login
+          pin={this.state.pin}
+          onLoginChange={this.handleLoginChange}
+        ></Login>
       );
     }
     return (
-      <Login
-        pin={this.state.pin}
-        onLoginChange={this.handleLoginChange}
-      ></Login>
+      <Home
+        onExaminationChange={this.handleExaminationChange}
+      ></Home>
     );
   }
 }
