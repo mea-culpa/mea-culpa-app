@@ -70,6 +70,7 @@ export default class ExaminationQuestion extends Component {
 
           <KeyboardAvoidingView
             behavior='padding'>
+            <Text style={styles.label}>Notatki:</Text>
             <TextInput
               defaultValue={this.state.question.notes}
               onChangeText={(text) => this.updateNotes(text)}
@@ -106,6 +107,9 @@ const styles = StyleSheet.create({
     textAlign: 'justify',
     color: '#333333',
     margin: 10,
+  },
+  label:{
+    marginLeft: 10,
   },
   icon: {
     width: 60,
