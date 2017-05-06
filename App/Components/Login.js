@@ -30,6 +30,7 @@ export default class Login extends Component {
       <View style={styles.container}>
         <Image source={require('./../Img/mea-culp-logo-1024.png')} style={{width: 200, height: 200}}/>
         <TextInput
+          autoFocus={true}
           keyboardType="numeric"
           style={{width: 100, height: 40, textAlign: "center"/*, borderBottomColor: 'black', borderBottomWidth: 1*/}}
           value={this.state.pin}
