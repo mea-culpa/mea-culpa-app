@@ -1,0 +1,230 @@
+{
+    "name": "Rachunek sumienia dla dzieci",
+    "description": "http://www.kleszcz.franciszkanie.pl/strona/rachunek.htm",
+    "questions": [
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy modliłem się rano i wieczorem?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy podczas modlitwy byłem skupiony?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy nie przeszkadzałem innym w modlitwie?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy wierzyłem we wróżby i przesądy?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy wymawiałem imiona święte bez uszanowania, w gniewie lub w żartach?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy przysięgałem?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy opuszczałem Mszę św. w niedziele i święta?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy spóźniałem się na Mszę św.?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy w kościele dobrze się zachowywałem?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy słuchałem rodziców i wychowawców?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy szanowałem starszych?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy szkodziłem sobie lub innym na zdrowiu?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy paliłem papierosy lub piłem alkohol?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy biłem się z kolegami?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy dałem zgorszenie swoim postępowaniem?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy dręczyłem zwierzęta?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy myślałem lub mówiłem o rzeczach nieskromnych (nieprzyzwoitych)?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy oglądałem filmy nieprzyzwoite?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy bawiłem się nieskromnie sam lub z kimś innym?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy kradłem lub niszczyłem własność społeczną lub prywatną?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy pragnąłem zabrać cudzą rzecz?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy oddałem rzeczy pożyczone lub znalezione?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy nie oszukiwałem?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy kłamałem?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy obmawiałem, plotkowałem lub oczerniałem bliźniego?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy w dni postne jadłem dobrowolnie potrawy mięsne?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy byłem pyszny i wynosiłem się nad innych?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy byłem łakomy?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy byłem zazdrosny?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy gniewałem się?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Czy byłem leniwy w nauce i pracy?",
+      		"notes": ""
+      	},
+      	{
+      		"category": "Rachunek sumienia dla dzieci",
+      		"description": "",
+      		"sin": false,
+      		"name": "Który grzech popełniałem najczęściej?",
+      		"notes": ""
+      	}
+    ]
+}
