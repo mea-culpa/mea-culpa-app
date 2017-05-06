@@ -10,7 +10,8 @@ import {
   StyleSheet,
   Text,
   View,
-  Image
+  Image,
+  BackHandler
 } from 'react-native';
 
 import Login from "./App/Components/Login";
@@ -25,6 +26,16 @@ export default class MeaCulpa extends Component {
     };
     this.handleLoginChange = this.handleLoginChange.bind(this);
     this.handleExaminationChange = this.handleExaminationChange.bind(this);
+
+    BackHandler.addEventListener('hardwareBackPress', () => {
+      if (this.state.examination) {
+        this.setState({
+          examination: null
+        });
+        return true;
+      }
+      return false;
+    });
   }
   handleLoginChange(logged) {
     this.setState({
