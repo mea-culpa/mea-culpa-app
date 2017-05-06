@@ -29,8 +29,8 @@ export function list() {
       Promise.all(files.map(
         file => (RNFS.readFile(file.path, 'utf8'))
       ))
-      .then(data => (data.map(
-        d => JSON.parse(d)
+      .then(stringDataArray => (stringDataArray.map(
+        stringData => JSON.parse(stringData)
       )))
     );
 }
@@ -41,4 +41,9 @@ export function load(name) {
 
 export function write(name, object) {
   return RNFS.writeFile(`${RNFS.DocumentDirectoryPath}/examinations/${name}.json`, JSON.stringify(object), 'utf8');
+}
+
+export function delete(name) {
+  RNFS.unlink(`${RNFS.DocumentDirectoryPath}/examinations/${name}.json`)
+
 }

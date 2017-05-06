@@ -87,10 +87,10 @@ export default class Home extends Component {
           dataSource={this.state.examinationList}
           renderRow={(rowData) => (
             <Button
-              onPress={(state)=>{
+              onPress={()=>{
                 this.props.onExaminationChange(rowData)
               }}
-              title={rowData.name}
+              title={`${rowData.name} ${(rowData.filename)?rowData.filename.split("_")[1].split(".")[0]:''}`}
               accessibilityLabel="Learn more about this purple button"
             />
             )}
