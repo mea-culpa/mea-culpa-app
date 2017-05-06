@@ -19,6 +19,10 @@ import Home from "./App/Components/Home";
 import Examination from "./App/Components/Examination"
 import PinSet from "./App/Components/PinSet"
 
+import {
+  remove
+} from "./App/Lib/Pin";
+
 export default class MeaCulpa extends Component {
   constructor(props) {
     super(props);
@@ -28,6 +32,7 @@ export default class MeaCulpa extends Component {
       examination: null
     };
     this.handlePinChange = this.handlePinChange.bind(this);
+    this.handlePinReset = this.handlePinReset.bind(this);
     this.handleLoginChange = this.handleLoginChange.bind(this);
     this.handleExaminationChange = this.handleExaminationChange.bind(this);
 
@@ -62,6 +67,12 @@ export default class MeaCulpa extends Component {
       examination
     });
   }
+  handlePinReset() {
+    remove()
+      .then(() => {
+        this.setState({ pin: '' });
+      });
+  }
   render() {
     if (!this.state.pin) {
       return (
@@ -83,6 +94,7 @@ export default class MeaCulpa extends Component {
     if (this.state.examination) {
       return (
         <Examination
+          pinSet={this.state.pin}
           examination={this.state.examination}
           onExaminationChange={this.handleExaminationChange}
         ></Examination>
@@ -91,6 +103,8 @@ export default class MeaCulpa extends Component {
 
     return (
       <Home
+        pinSet={this.state.pin}
+        onPinReset={this.handlePinReset}
         onExaminationChange={this.handleExaminationChange}
       ></Home>
     );
