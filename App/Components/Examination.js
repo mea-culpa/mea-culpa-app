@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { ListView, Alert, Text, View, TouchableHighlight, Keyboard } from 'react-native'
+import { ListView, Alert, Text, View, TouchableHighlight, Keyboard, Button } from 'react-native'
 // import _ from "lodash";
 
 import Swiper from 'react-native-swiper';
@@ -43,7 +43,7 @@ export default class Examinaton extends Component {
           ></ExaminationQuestion>
       );
     });
-    
+
     elems.push((
         <ExaminationSummary
           key="summary"
@@ -57,31 +57,40 @@ export default class Examinaton extends Component {
   render() {
     return (
       <Swiper
+        ref='swiper'
         loop={false}
         showsButtons={true}
         onTouchStart={Keyboard.dismiss}
         onMomentumScrollEnd={Keyboard.dismiss}
         renderPagination={(index, total) => {
           return (
-            <View pointerEvents='none' style={{
+            <View style={{
               position: 'absolute',
               bottom: 30,
               left: 0,
               right: 0,
-              flexDirection: 'row',
+              flexDirection: 'column',
               flex: 1,
               justifyContent: 'center',
               alignItems: 'center',
               backgroundColor: 'transparent'
             }}>
+
               <Text style={{
                 marginLeft: 3,
                 marginRight: 3,
                 marginTop: 3,
                 marginBottom: 3
               }}>
-                <Text>{index + 1}</Text>/{total}
+                {index + 1}/{total}
               </Text>
+              <Button
+                onPress={() => {
+                  this.refs.swiper.scrollBy(total - index);
+                }}
+                title="Podsumowanie"
+                accessibilityLabel="Podsumowanie"
+              />
             </View>
           );
         }}
