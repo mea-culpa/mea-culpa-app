@@ -41,7 +41,7 @@ export default class Examinaton extends Component {
           ></ExaminationQuestion>
       );
     });
-
+    
     elems.push((
         <ExaminationSummary
           examination={this.props.examination}
