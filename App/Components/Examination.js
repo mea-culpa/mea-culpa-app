@@ -45,6 +45,7 @@ export default class Examinaton extends Component {
     elems.push((
         <ExaminationSummary
           examination={this.props.examination}
+          onExaminationDelete={this.props.onExaminationChange}
         ></ExaminationSummary>
     ));
     return elems;

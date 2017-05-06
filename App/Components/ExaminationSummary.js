@@ -10,6 +10,7 @@ import {
   TouchableHighlight
 } from 'react-native';
 
+import {deleteFile} from '../Lib/Examination';
 
 export default class ExaminationSummary extends Component {
   constructor(props) {
@@ -32,12 +33,11 @@ export default class ExaminationSummary extends Component {
       }}>
         <Text>{this.props.examination.name}</Text>
         <Text>Twoje grzechy:</Text>
-        <ListView
-          dataSource={this.state.dataSource}
-          renderRow={(rowData) => <Text>*{rowData.name}</Text>}
-        />
         <Button
-          onPress={() => {}}
+          onPress={() => {
+            deleteFile(this.props.examination.filename)
+            this.props.onExaminationDelete()
+          }}
           title="Usuń"
           color="#841584"
           accessibilityLabel="Usuń"

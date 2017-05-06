@@ -90,7 +90,7 @@ export default class Home extends Component {
               onPress={()=>{
                 this.props.onExaminationChange(rowData)
               }}
-              title={`${rowData.name} ${(rowData.filename)?rowData.filename.split("_")[1].split(".")[0]:''}`}
+              title={`${rowData.name}`}
               accessibilityLabel="Learn more about this purple button"
             />
             )}
