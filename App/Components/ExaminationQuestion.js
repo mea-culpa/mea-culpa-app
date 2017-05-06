@@ -3,6 +3,7 @@ import {
   View,
   Text,
   Button,
+  Image,
   TextInput,
   StyleSheet,
 } from 'react-native';
@@ -34,14 +35,8 @@ export default class ExaminationQuestion extends Component {
           flexDirection: 'row',
           justifyContent: 'space-around',
         }}>
-          <Button
-            title="Sin"
-            color="black"
-          />
-          <Button
-            title="Win"
-            color="azure"
-          />
+          <Image source={require('./../Img/devil.png')} style={styles.icon} />
+          <Image source={require('./../Img/angel.png')} style={styles.icon} />
         </View>
 
         <TextInput
@@ -49,7 +44,11 @@ export default class ExaminationQuestion extends Component {
           onChangeText={(text) => this.setState({text})}
           multiline={true}
           numberOfLines={10}
-          style={{margin: 10}}
+          style={{
+            margin: 10,
+            borderWidth: 0.5,
+            borderColor: '#0f0f0f',
+          }}
         />
 
       </View>
@@ -66,12 +65,16 @@ const styles = StyleSheet.create({
   },
   description: {
     textAlign: 'center',
-    color: '#333333',
     fontStyle: 'italic',
     margin: 10,
   },
   question: {
     textAlign: 'justify',
+    color: '#333333',
     margin: 10,
   },
+  icon: {
+    width: 60,
+    height: 60,
+  }
 });
