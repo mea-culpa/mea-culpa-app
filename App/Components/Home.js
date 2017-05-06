@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ListView, Button } from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  ListView,
+  Button,
+  ToastAndroid
+} from 'react-native';
 import ExaminationQuestion from './ExaminationQuestion'
+import {list} from '../Lib/ExaminationTemplate'
 
 const styles = StyleSheet.create({
   container: {
@@ -31,17 +39,20 @@ const styles = StyleSheet.create({
 export default class Home extends Component {
   constructor(props) {
     super(props);
-    const row = require( '../jsons/example.json');
+    const row = list()
 
     const dataSource = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     this.state = {
-      dataSource: dataSource.cloneWithRows([row, row, row]),
+      dataSource: dataSource.cloneWithRows([]),
       view: ''
     };
+    list().then((data) => {
+      this.setState({dataSource: dataSource.cloneWithRows(data)})
+    })
   }
 
   setStateHandler(data) {
-    this.setState({view: data})
+    this.setState({examination: data})
   }
 
   render() {
@@ -52,14 +63,16 @@ export default class Home extends Component {
 
         <ListView
           dataSource={this.state.dataSource}
-          renderRow={(rowData) => <Button
-            onPress={(state)=>{
-              this.setStateHandler("ExaminationQuestion")
-            }}
-            title={rowData.name}
-            accessibilityLabel="Learn more about this purple button"
-          />}
-        />
+          renderRow={(rowData) => (
+            <Button
+              onPress={(state)=>{
+                this.props.onExaminationChange(rowData)
+              }}
+              title={rowData.name}
+              accessibilityLabel="Learn more about this purple button"
+            />
+            )}
+          />
 
         <Text style={styles.previous}>Poprzednie</Text>
 
