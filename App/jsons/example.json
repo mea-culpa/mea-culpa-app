@@ -1,0 +1,19 @@
+{
+    "name": "Rachnek dla dorosłych",
+    "description": "",
+    "categories": [{
+        "name": "Wobec Boga",
+        "description": "Bo gdzie jest twój skarb, tam będzie i serce twoje (Mt 6,21)",
+        "questions": [{
+            "question": "Czy wierzysz w Jego Miłosierdzie?",
+            "notes": "text",
+            "sin": false,
+            "last_update": "2017-05-06T09:59:06+00:00"
+        }, {
+            "question": "Jaki jest twój obraz Boga? Czy bardziej się go boisz niż kochasz?",
+            "notes": "text",
+            "sin": false,
+            "last_update": "2017-05-06T09:59:06+00:00"
+        }]
+    }]
+}

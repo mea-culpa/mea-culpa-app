@@ -15,6 +15,7 @@ import {
 
 import Login from "./App/Components/Login";
 import Home from "./App/Components/Home";
+import Examination from "./App/Components/Examination"
 
 export default class MeaCulpa extends Component {
   constructor(props) {
