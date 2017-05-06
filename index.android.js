@@ -17,14 +17,17 @@ import {
 import Login from "./App/Components/Login";
 import Home from "./App/Components/Home";
 import Examination from "./App/Components/Examination"
+import PinSet from "./App/Components/PinSet"
 
 export default class MeaCulpa extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      logged: true,
+      pin: null,
+      logged: false,
       examination: null
     };
+    this.handlePinChange = this.handlePinChange.bind(this);
     this.handleLoginChange = this.handleLoginChange.bind(this);
     this.handleExaminationChange = this.handleExaminationChange.bind(this);
 
@@ -44,6 +47,11 @@ export default class MeaCulpa extends Component {
       return false;
     });
   }
+  handlePinChange(pin) {
+    this.setState({
+      pin
+    });
+  }
   handleLoginChange(logged) {
     this.setState({
       logged
@@ -55,9 +63,18 @@ export default class MeaCulpa extends Component {
     });
   }
   render() {
+    if (!this.state.pin) {
+      return (
+        <PinSet
+          onPinChange={this.handlePinChange}
+        ></PinSet>
+      );
+    }
+
     if (!this.state.logged) {
       return (
         <Login
+          pinSet={this.state.pin}
           onLoginChange={this.handleLoginChange}
         ></Login>
       );

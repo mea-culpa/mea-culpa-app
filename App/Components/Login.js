@@ -8,28 +8,20 @@ import {
   TextInput
 } from 'react-native';
 
-import {
-  list
-} from "../Lib/ExaminationTemplate";
 
 export default class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
       pin: '',
-      pinSet: false
     };
     this.handlePinTextInputChange = this.handlePinTextInputChange.bind(this);
-
-    list().then(result => {
-      console.log(result);
-    });
   }
   handlePinTextInputChange(text) {
     this.setState({
       pin: text
     });
-    if (text === "1234") {
+    if (text === this.props.pinSet) {
       this.props.onLoginChange(true);
     }
   }
