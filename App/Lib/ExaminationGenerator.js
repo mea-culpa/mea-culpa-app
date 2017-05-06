@@ -1,18 +1,46 @@
 function generate(name) {
   let question = {
-      "category": "Wobec drugiego człowieka",
-      "description": "Błogosławieni, którzy łakną i pragną sprawiedliwości, albowiem oni będą nasyceni (Mt 5,6)",
+      "category": "Rachunek sumienia dla dzieci",
+      "description": "",
       "sin": false,
       "name": name,
-      "notes": "Notatka"
+      "notes": ""
   }
   return question;
 }
 
-var text = `Jaki jesteś w pracy? Czy praca i zarobek jest najważniejszą sprawą, której oddajesz wszystkie swoje siły i czas? Jeżeli jesteś szefem —jaki jest twój stosunek do współpracowników? Czy jesteś sprawiedliwy w podziale pracy i dochodów? Czy w twoim miejscu pracy dbasz o dobrą atmosferę, o poprawne stosunki międzyludzkie? Czy zarobki przeznaczasz na konsumpcje czy też inwestujesz, aby dać nowe miejsca pracy? Czy uczciwie płacisz podatki? Czy bierzesz udział w nielegal­nych operacjach finansowych i własnościowych? Czy dajesz i bierzesz łapówki?
-Jeżeli jesteś pracownikiem — czy pracujesz uczciwie? Czy rozwijasz się zawodowo, czy też po­przestajesz na tym, co wiesz „od zawsze”? Czy starasz się o utrzymanie dobrej atmosfery w miejscu pracy? Czy jesteś koleżeński?
-Czy kierujesz się w stosunkach z innymi sprawiedliwością, to znaczy, czy dajesz każdemu, co mu się słusznie należy? Czy nie odbierasz ludziom dobrego imienia przez pomówienia, plotki, kłamstwa? Czy spotkając się z krzywdą człowieka — stajesz w jego obronie, czy też tchórzliwie wycofujesz się dla „świętego spokoju”? Czy świadomie głosisz twierdzenia, że pewne grupy ludzi (Żydzi itd…) są odpowiedzialne za całe zło na świecie?
-Czy narażasz życie innych i swoje, nie przestrzegając zasad kodeksu drogowego? Czy prowadziłeś po spożyciu alkoholu? Czy próbowałeś przekupić policjanta?.`;
+var text = `Czy modliłem się rano i wieczorem?
+Czy podczas modlitwy byłem skupiony?
+Czy nie przeszkadzałem innym w modlitwie?
+Czy wierzyłem we wróżby i przesądy?
+Czy wymawiałem imiona święte bez uszanowania, w gniewie lub w żartach?
+Czy przysięgałem?
+Czy opuszczałem Mszę św. w niedziele i święta?
+Czy spóźniałem się na Mszę św.?
+Czy w kościele dobrze się zachowywałem?
+Czy słuchałem rodziców i wychowawców?
+Czy szanowałem starszych?
+Czy szkodziłem sobie lub innym na zdrowiu?
+Czy paliłem papierosy lub piłem alkohol?
+Czy biłem się z kolegami?
+Czy dałem zgorszenie swoim postępowaniem?
+Czy dręczyłem zwierzęta?
+Czy myślałem lub mówiłem o rzeczach nieskromnych (nieprzyzwoitych)?
+Czy oglądałem filmy nieprzyzwoite?
+Czy bawiłem się nieskromnie sam lub z kimś innym?
+Czy kradłem lub niszczyłem własność społeczną lub prywatną?
+Czy pragnąłem zabrać cudzą rzecz?
+Czy oddałem rzeczy pożyczone lub znalezione?
+Czy nie oszukiwałem?
+Czy kłamałem?
+Czy obmawiałem, plotkowałem lub oczerniałem bliźniego?
+Czy w dni postne jadłem dobrowolnie potrawy mięsne?
+Czy byłem pyszny i wynosiłem się nad innych?
+Czy byłem łakomy?
+Czy byłem zazdrosny?
+Czy gniewałem się?
+Czy byłem leniwy w nauce i pracy?
+Który grzech popełniałem najczęściej?`;
 
 var questions = text.split('\n');
 
