@@ -5,7 +5,8 @@ import {
   StyleSheet,
   ListView,
   Button,
-  ToastAndroid
+  ToastAndroid,
+  TouchableHighlight
 } from 'react-native';
 import moment from 'moment';
 
@@ -19,7 +20,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'white',
+    borderRadius: 4,
+    borderWidth: 1,
+    borderColor: 'black',
   },
   title: {
     fontSize: 20,
@@ -27,15 +31,30 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   new: {
+    fontSize: 18,
     textAlign: 'left',
     color: '#333333',
     marginBottom: 5,
   },
   previous: {
+    fontSize: 18,
     textAlign: 'left',
     color: '#333333',
     marginBottom: 5,
+    marginTop: 5,
   },
+  list_element: {
+    // backgroundColor: 'black',
+    color: 'black',
+    fontSize: 15,
+    fontWeight: 'bold',
+    marginBottom: 2,
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingLeft: 5,
+    paddingRight: 5,
+    borderColor: 'black'
+  }
 });
 
 
@@ -65,7 +84,7 @@ export default class Home extends Component {
   }
 
   handleDate(filename){
-    return moment(parseInt(filename.split("_")[1].split(".")[0])).format("YYYY-MM-DD hh:mm:ss")
+    return moment(parseInt(filename.split("_")[1].split(".")[0])).format("hh:mm DD-MM-YY")
   }
 
   render() {
@@ -77,14 +96,9 @@ export default class Home extends Component {
         <ListView
           dataSource={this.state.examinationTemplateList}
           renderRow={(rowData) => (
-            <Button
-              onPress={(state)=>{
-                this.props.onExaminationChange(clone(rowData))
-              }}
-              title={rowData.name}
-              color="black"
-              accessibilityLabel="Learn more about this purple button"
-            />
+            <TouchableHighlight onPress={() => this.props.onExaminationChange(clone(rowData))}>
+              <Text style={styles.list_element}>{rowData.name}</Text>
+            </TouchableHighlight>
             )}
           />
 
@@ -93,14 +107,12 @@ export default class Home extends Component {
         <ListView
           dataSource={this.state.examinationList}
           renderRow={(rowData) => (
-            <Button
+            <TouchableHighlight
               onPress={()=>{
                 this.props.onExaminationChange(rowData)
-              }}
-              title={`${rowData.name} \n ${(rowData.filename)?this.handleDate(rowData.filename):''}`}
-              color="black"
-              accessibilityLabel="Learn more about this purple button"
-            />
+              }}>
+              <Text style={styles.list_element}>{`${rowData.name} - ${(rowData.filename)?this.handleDate(rowData.filename):''}`}</Text>
+            </TouchableHighlight>
             )}
           />
         <Button
