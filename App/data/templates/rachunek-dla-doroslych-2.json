@@ -1,0 +1,231 @@
+{
+    "name": "Rachunek sumienia dorosłych 2",
+    "description": "http://www.duchprawdy.com/dorosli.htm",
+    "questions": [
+    	{
+    		"category": "Pytania wstępne",
+    		"description": "",
+    		"sin": false,
+    		"name": "Żałuję za popełnione zło?",
+    		"notes": ""
+    	},
+    	{
+    		"category": "Pytania wstępne",
+    		"description": "",
+    		"sin": false,
+    		"name": "Mam stanąć przed Bogiem, który jest Miłością, a ile jest miłości we mnie?",
+    		"notes": ""
+    	},
+    	{
+    		"category": "Pytania wstępne",
+    		"description": "",
+    		"sin": false,
+    		"name": "Bóg chce mnie uzdrowić. Czy jestem gotów przyjąć ten dar?",
+    		"notes": ""
+    	},
+    	{
+    		"category": "Pytania wstępne",
+    		"description": "",
+    		"sin": false,
+    		"name": "Co zmieniło się od ostatniej spowiedzi? Może zapomniałem lub zataiłem ciężki grzech?",
+    		"notes": ""
+    	},
+    	{
+    		"category": "Pytania wstępne",
+    		"description": "",
+    		"sin": false,
+    		"name": "Pokuta zobowiązuje do naprawienia wyrządzonego zła. Jak ją odprawiłem?",
+    		"notes": ""
+    	},
+    	{
+    		"category": "Pytania wstępne",
+    		"description": "",
+    		"sin": false,
+    		"name": "Czy bliźni zauważyli moją poprawę po ostatniej spowiedzi?",
+    		"notes": ""
+    	},
+    	{
+    		"category": "Dziesięć przykazań Bożych",
+    		"description": "I przykazanie: Nie będziesz miał bogów cudzych przede Mną",
+    		"sin": false,
+    		"name": "Bóg jest moim Ojcem. Ile jest we mnie z obrazu Boga?",
+    		"notes": ""
+    	},
+    	{
+    		"category": "Dziesięć przykazań Bożych",
+    		"description": "I przykazanie: Nie będziesz miał bogów cudzych przede Mną",
+    		"sin": false,
+    		"name": "Czy pielęgnuję w sobie dar chrztu świętego?",
+    		"notes": ""
+    	},
+    	{
+    		"category": "Dziesięć przykazań Bożych",
+    		"description": "I przykazanie: Nie będziesz miał bogów cudzych przede Mną",
+    		"sin": false,
+    		"name": "Każdego dnia wybieram pomiędzy wieloma wartościami. A na którym miejscu jest Bóg?",
+    		"notes": ""
+    	},
+    	{
+    		"category": "Dziesięć przykazań Bożych",
+    		"description": "I przykazanie: Nie będziesz miał bogów cudzych przede Mną",
+    		"sin": false,
+    		"name": "Ile czasu poświęcam na rozmowę z Bogiem i słuchanie Go?",
+    		"notes": ""
+    	},
+    	{
+    		"category": "Dziesięć przykazań Bożych",
+    		"description": "I przykazanie: Nie będziesz miał bogów cudzych przede Mną",
+    		"sin": false,
+    		"name": "Celem życia chrześcijanina jest zbawienie. Co przysłania mi ten cel?",
+    		"notes": ""
+    	},
+    	{
+    		"category": "Dziesięć przykazań Bożych",
+    		"description": "I przykazanie: Nie będziesz miał bogów cudzych przede Mną",
+    		"sin": false,
+    		"name": "Jak rozwijam i pogłębiam dar wiary?",
+    		"notes": ""
+    	},
+    	{
+    		"category": "Dziesięć przykazań Bożych",
+    		"description": "I przykazanie: Nie będziesz miał bogów cudzych przede Mną",
+    		"sin": false,
+    		"name": "Czy wątpię w prawdy wiary?",
+    		"notes": ""
+    	},
+    	{
+    		"category": "Dziesięć przykazań Bożych",
+    		"description": "I przykazanie: Nie będziesz miał bogów cudzych przede Mną",
+    		"sin": false,
+    		"name": "Może niedbale czynię znak krzyża?",
+    		"notes": ""
+    	},
+    	{
+    		"category": "Dziesięć przykazań Bożych",
+    		"description": "I przykazanie: Nie będziesz miał bogów cudzych przede Mną",
+    		"sin": false,
+    		"name": "Bóg zaprasza mnie do współpracy w budowaniu Królestwa Bożego. Jaka jest moja postawa wobec spotykanych ludzi?",
+    		"notes": ""
+    	},
+    	{
+    		"category": "Dziesięć przykazań Bożych",
+    		"description": "I przykazanie: Nie będziesz miał bogów cudzych przede Mną",
+    		"sin": false,
+    		"name": "Czy unoszę się pychą?",
+    		"notes": ""
+    	},
+    	{
+    		"category": "Dziesięć przykazań Bożych",
+    		"description": "I przykazanie: Nie będziesz miał bogów cudzych przede Mną",
+    		"sin": false,
+    		"name": "Jak wypełniam swoje obowiązki w pracy?",
+    		"notes": ""
+    	},
+    	{
+    		"category": "Dziesięć przykazań Bożych",
+    		"description": "I przykazanie: Nie będziesz miał bogów cudzych przede Mną",
+    		"sin": false,
+    		"name": "Czy w życiu kieruję się nauką Jezusa?",
+    		"notes": ""
+    	},
+    	{
+    		"category": "Dziesięć przykazań Bożych",
+    		"description": "I przykazanie: Nie będziesz miał bogów cudzych przede Mną",
+    		"sin": false,
+    		"name": "Człowiek rozwija się nieustannie. A moja wiara i wiedza religijna?",
+    		"notes": ""
+    	},
+	{
+		"category": "Dziesięć przykazań Bożych",
+		"description": "II przykazanie: Nie będziesz brał imienia Pana Boga swego nadaremnie",
+		"sin": false,
+		"name": "Imię Boga jest święte. Czy nie wymieniam go bez uszanowania, w gniewie i w żartach?",
+		"notes": ""
+	},
+	{
+		"category": "Dziesięć przykazań Bożych",
+		"description": "II przykazanie: Nie będziesz brał imienia Pana Boga swego nadaremnie",
+		"sin": false,
+		"name": "Bluźnierstwo przeciw imieniu Bożemu i fałszywa przysięga jest grzechem. Czy szanuję imię mego Boga?",
+		"notes": ""
+	},
+	{
+		"category": "Dziesięć przykazań Bożych",
+		"description": "II przykazanie: Nie będziesz brał imienia Pana Boga swego nadaremnie",
+		"sin": false,
+		"name": "Czasem proszę o coś Boga, składam przyrzeczenia, obietnice. Czy dotrzymuję składanych ślubów?",
+		"notes": ""
+	},
+	{
+		"category": "Dziesięć przykazań Bożych",
+		"description": "II przykazanie: Nie będziesz brał imienia Pana Boga swego nadaremnie",
+		"sin": false,
+		"name": "Czy złorzeczę i przeklinam bliźnich?",
+		"notes": ""
+	},
+	{
+		"category": "Dziesięć przykazań Bożych",
+		"description": "II przykazanie: Nie będziesz brał imienia Pana Boga swego nadaremnie",
+		"sin": false,
+		"name": "Boża opatrzność czuwa nade mną. Czy ulegam pokusie korzystania z wróżb i przepowiedni astrologów?",
+		"notes": ""
+	},
+	{
+		"category": "Dziesięć przykazań Bożych",
+		"description": "II przykazanie: Nie będziesz brał imienia Pana Boga swego nadaremnie",
+		"sin": false,
+		"name": "Może poddaję się zwątpieniu?",
+		"notes": ""
+	},
+
+	{
+		"category": "Dziesięć przykazań Bożych",
+		"description": "III przykazanie: Pamiętaj, abyś dzień święty święcił",
+		"sin": false,
+		"name": "Jaki jest mój dzień święty?",
+		"notes": ""
+	},
+	{
+		"category": "Dziesięć przykazań Bożych",
+		"description": "III przykazanie: Pamiętaj, abyś dzień święty święcił",
+		"sin": false,
+		"name": "Czy w moim domu panuje świąteczna atmosfera?",
+		"notes": ""
+	},
+	{
+		"category": "Dziesięć przykazań Bożych",
+		"description": "III przykazanie: Pamiętaj, abyś dzień święty święcił",
+		"sin": false,
+		"name": "Jak często rozmawiam z domownikami na temat wiary?",
+		"notes": ""
+	},
+	{
+		"category": "Dziesięć przykazań Bożych",
+		"description": "III przykazanie: Pamiętaj, abyś dzień święty święcił",
+		"sin": false,
+		"name": "Jak zachowuję się wobec ludzi, którym grozi utrata wiary?",
+		"notes": ""
+	},
+	{
+		"category": "Dziesięć przykazań Bożych",
+		"description": "III przykazanie: Pamiętaj, abyś dzień święty święcił",
+		"sin": false,
+		"name": "Bóg mówi do mnie w czytaniach mszalnych. Czy słucham uważnie i zapamiętuję wskazania Boga z tekstów Pisma Świętego?",
+		"notes": ""
+	},
+	{
+		"category": "Dziesięć przykazań Bożych",
+		"description": "III przykazanie: Pamiętaj, abyś dzień święty święcił",
+		"sin": false,
+		"name": "Czy chętnie i punktualnie przychodzę na Mszę świętą?",
+		"notes": ""
+	}
+
+
+
+
+
+
+
+    ]
+}
