@@ -20,7 +20,7 @@ export default class Login extends Component {
       pinSet: false
     };
     this.handlePinTextInputChange = this.handlePinTextInputChange.bind(this);
-    this.props.onLoginChange(true);
+
     list().then(result => {
       console.log(result);
     });

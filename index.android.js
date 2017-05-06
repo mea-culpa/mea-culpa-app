@@ -22,7 +22,7 @@ export default class MeaCulpa extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      logged: false,
+      logged: true,
       examination: null
     };
     this.handleLoginChange = this.handleLoginChange.bind(this);
