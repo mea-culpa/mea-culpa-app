@@ -47,7 +47,7 @@ export default class PinSet extends Component {
     return (
       <View style={styles.container}>
         <Image source={require('./../Img/mea-culp-logo-1024.png')} style={{width: 200, height: 200}}/>
-        <Text>Set your PIN for the first time</Text>
+        <Text>Przed pierwszym użyciem ustaw swój PIN:</Text>
         <TextInput
           keyboardType="numeric"
           style={{width: 100, height: 40, textAlign: "center"/*, borderBottomColor: 'black', borderBottomWidth: 1*/}}
@@ -61,7 +61,7 @@ export default class PinSet extends Component {
           style={{width: 100, height: 40, textAlign: "center"/*, borderBottomColor: 'black', borderBottomWidth: 1*/}}
           value={this.state.pin_2}
           onChangeText={this.handlePin2TextInputChange}
-          placeholder="CONFIRM"
+          placeholder="POTWIERDŹ"
           secureTextEntry={true}
         />
       </View>

@@ -103,6 +103,10 @@ export default class Home extends Component {
             />
             )}
           />
+        <Button
+          title="Zresetuj PIN"
+          onPress={this.props.onPinReset}
+        ></Button>
       </View>
     )
   }
