@@ -40,11 +40,7 @@ export default class ExaminationQuestion extends Component {
 
   render() {
     return (
-      <View style={{
-        flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'space-around',
-      }}>
+      <View>
         <Text style={styles.category}>{this.state.question.category}</Text>
         <Text style={styles.description}>{this.state.question.description}</Text>
         <Text style={styles.question}>{this.state.question.name}</Text>

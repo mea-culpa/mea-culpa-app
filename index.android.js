@@ -35,6 +35,12 @@ export default class MeaCulpa extends Component {
         });
         return true;
       }
+      if (this.state.logged) {
+        this.setState({
+          logged: false
+        });
+        return true;
+      }
       return false;
     });
   }
