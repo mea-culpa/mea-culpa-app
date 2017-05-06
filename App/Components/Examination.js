@@ -13,7 +13,9 @@ export default class Examinaton extends Component {
   constructor(props) {
     super(props);
     this.handleQuestionUpdate = this.handleQuestionUpdate.bind(this);
+  }
 
+  componentWillMount() {
     if (!this.props.examination.filename) {
       // set the filename
       let filename =  this.props.examination.name + "_" + new Date().getTime();
