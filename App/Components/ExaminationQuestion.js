@@ -6,42 +6,67 @@ import {
   Image,
   TextInput,
   StyleSheet,
+  TouchableHighlight
 } from 'react-native';
 
 
 export default class ExaminationQuestion extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {question: props.question};
+    this.updateNotes = this.updateNotes.bind(this);
+    this.setSin = this.setSin.bind(this);
+  }
+
+  updateNotes(text) {
+    this.setState((state) => {
+      let newQuestion = state.question;
+      newQuestion.notes = text
+      return {
+        question: newQuestion,
+      };
+    });
+  };
+
+  setSin(sin) {
+    this.setState((state) => {
+      let newQuestion = state.question;
+      newQuestion.sin = sin;
+      return{
+        question: newQuestion,
+      };
+    });
+  };
+
   render() {
-    let category = {
-      name : "Wobec Boga",
-      description : "Bo gdzie jest twój skarb, tam będzie i serce twoje (Mt 6,21)"
-    };
-    let question = {
-      name: "Czy wierzysz w Jego Miłosierdzie?",
-      notes: "text",
-      sin: false,
-    };
     return (
       <View style={{
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'space-around',
       }}>
-        <Text style={styles.category}>{category.name}</Text>
-        <Text style={styles.description}>{category.description}</Text>
-        <Text style={styles.question}>{question.name}</Text>
+        <Text style={styles.category}>{this.state.question.category}</Text>
+        <Text style={styles.description}>{this.state.question.description}</Text>
+        <Text style={styles.question}>{this.state.question.name}</Text>
 
         <View style={{
           flex: 0,
           flexDirection: 'row',
           justifyContent: 'space-around',
         }}>
-          <Image source={require('./../Img/devil.png')} style={styles.icon} />
-          <Image source={require('./../Img/angel.png')} style={styles.icon} />
+          <TouchableHighlight onPress={() => this.setSin(true)}>
+            <Image source={require('./../Img/devil.png')}
+              style={this.state.question.sin ? [styles.icon, styles.iconActive] : styles.icon} />
+          </TouchableHighlight>
+          <TouchableHighlight onPress={() => this.setSin(false)}>
+            <Image source={require('./../Img/angel.png')}
+              style={this.state.question.sin ? styles.icon : [styles.icon, styles.iconActive]} />
+          </TouchableHighlight>
         </View>
 
         <TextInput
-          placeholder="Dodaj notatkę"
-          onChangeText={(text) => this.setState({text})}
+          defaultValue={this.state.question.notes}
+          onChangeText={(text) => this.updateNotes(text)}
           multiline={true}
           numberOfLines={10}
           style={{
@@ -76,5 +101,8 @@ const styles = StyleSheet.create({
   icon: {
     width: 60,
     height: 60,
+  },
+  iconActive: {
+    backgroundColor: 'deepskyblue',
   }
 });
