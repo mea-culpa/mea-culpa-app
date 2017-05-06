@@ -50,11 +50,11 @@ export default class ExaminationQuestion extends Component {
           }}>
             <TouchableWithoutFeedback underlayColor="white" onPress={() => this.setSin(true)}>
               <Image source={require('./../Img/devil.png')}
-                style={this.props.question.sin ? [styles.icon, styles.iconActive] : styles.icon} />
+                style={this.props.question.sin === true ? [styles.icon, styles.iconActive] : styles.icon} />
             </TouchableWithoutFeedback>
             <TouchableWithoutFeedback underlayColor="white" onPress={() => this.setSin(false)}>
               <Image source={require('./../Img/angel.png')}
-                style={this.props.question.sin ? styles.icon : [styles.icon, styles.iconActive]} />
+                style={this.props.question.sin === false ? [styles.icon, styles.iconActive] : styles.icon} />
             </TouchableWithoutFeedback>
           </View>
 
