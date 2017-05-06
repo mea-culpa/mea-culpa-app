@@ -10,36 +10,66 @@ import {
   StyleSheet,
   Text,
   View,
-  Image
+  Image,
+  BackHandler
 } from 'react-native';
 
 import Login from "./App/Components/Login";
 import Home from "./App/Components/Home";
+import Examination from "./App/Components/Examination"
 
 export default class MeaCulpa extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      logged: false
+      logged: false,
+      examination: null
     };
     this.handleLoginChange = this.handleLoginChange.bind(this);
+    this.handleExaminationChange = this.handleExaminationChange.bind(this);
+
+    BackHandler.addEventListener('hardwareBackPress', () => {
+      if (this.state.examination) {
+        this.setState({
+          examination: null
+        });
+        return true;
+      }
+      return false;
+    });
   }
   handleLoginChange(logged) {
     this.setState({
       logged
     });
   }
+  handleExaminationChange(examination) {
+    this.setState({
+      examination
+    });
+  }
   render() {
-    if (this.state.logged) {
+    if (!this.state.logged) {
       return (
-        <Home></Home>
+        <Login
+          onLoginChange={this.handleLoginChange}
+        ></Login>
       );
     }
+
+    if (this.state.examination) {
+      return (
+        <Examination
+          examination={this.state.examination}
+          onExaminationChange={this.handleExaminationChange}
+        ></Examination>
+      );
+    }
+
     return (
-      <Login
-        pin={this.state.pin}
-        onLoginChange={this.handleLoginChange}
-      ></Login>
+      <Home
+        onExaminationChange={this.handleExaminationChange}
+      ></Home>
     );
   }
 }

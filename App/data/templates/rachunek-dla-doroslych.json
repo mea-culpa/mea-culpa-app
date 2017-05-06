@@ -1,0 +1,15 @@
+{
+    "name": "Rachunek sumienia dla dorosłych",
+    "description": "",
+    "categories": [{
+        "name": "Wobec Boga",
+        "description": "Bo gdzie jest twój skarb, tam będzie i serce twoje (Mt 6,21)",
+        "questions": [{
+            "question": "Czy wierzysz w Jego Miłosierdzie?",
+            "notes": "text"
+        }, {
+            "question": "Jaki jest twój obraz Boga? Czy bardziej się go boisz niż kochasz?",
+            "notes": "text"
+        }]
+    }]
+}
