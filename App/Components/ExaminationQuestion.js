@@ -39,7 +39,7 @@ export default class ExaminationQuestion extends Component {
           flexDirection: 'column',
           justifyContent: 'space-around',
         }}>
-          <Text style={styles.category}>{this.props.question.category}</Text>
+          <Text style={styles.category}><Text style={{fontFamily: 'Augusta', fontSize: 35}}>#</Text> {this.props.question.category}</Text>
           <Text style={styles.description}>{this.props.question.description}</Text>
           <Text style={styles.question}>{this.props.question.name}</Text>
 
@@ -86,12 +86,15 @@ const styles = StyleSheet.create({
   category: {
     fontSize: 25,
     textAlign: 'center',
-    margin: 5
+    marginTop: 5,
+    marginBottom: 1,
+    color: 'black'
   },
   description: {
     textAlign: 'center',
     fontStyle: 'italic',
-    margin: 5
+    margin: 1,
+    padding: 0
   },
   question: {
     textAlign: 'justify',
