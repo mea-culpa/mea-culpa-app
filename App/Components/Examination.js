@@ -44,7 +44,7 @@ export default class Examinaton extends Component {
 
     elems.push((
         <ExaminationSummary
-          examination={this.props.examinaton}
+          examination={this.props.examination}
         ></ExaminationSummary>
     ));
     return elems;
