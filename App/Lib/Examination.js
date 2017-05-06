@@ -43,7 +43,6 @@ export function write(name, object) {
   return RNFS.writeFile(`${RNFS.DocumentDirectoryPath}/examinations/${name}.json`, JSON.stringify(object), 'utf8');
 }
 
-export function delete(name) {
-  RNFS.unlink(`${RNFS.DocumentDirectoryPath}/examinations/${name}.json`)
-
+export function deleteFile(name) {
+  return RNFS.unlink(`${RNFS.DocumentDirectoryPath}/examinations/${name}.json`)
 }
