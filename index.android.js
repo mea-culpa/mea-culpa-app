@@ -40,11 +40,20 @@ export default class MeaCulpa extends Component {
     if (!this.state.logged) {
       return (
         <Login
-          pin={this.state.pin}
           onLoginChange={this.handleLoginChange}
         ></Login>
       );
     }
+
+    if (this.state.examination) {
+      return (
+        <Examination
+          examination={this.state.examination}
+          onExaminationChange={this.handleExaminationChange}
+        ></Examination>
+      );
+    }
+
     return (
       <Home
         onExaminationChange={this.handleExaminationChange}
