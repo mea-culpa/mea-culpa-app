@@ -18,6 +18,7 @@ import {clone} from '../Lib/Cloner'
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
@@ -84,7 +85,7 @@ export default class Home extends Component {
   }
 
   handleDate(filename){
-    return moment(parseInt(filename.split("_")[1].split(".")[0])).format("hh:mm DD-MM-YY")
+    return moment(parseInt(filename.split("_")[1].split(".")[0])).format("DD.MM.YYYY HH:mm")
   }
 
   render() {
@@ -94,6 +95,8 @@ export default class Home extends Component {
         <Text style={styles.new}>Nowy</Text>
 
         <ListView
+          style={{height: 400,}}
+          enableEmptySections={true}
           dataSource={this.state.examinationTemplateList}
           renderRow={(rowData) => (
             <TouchableHighlight onPress={() => this.props.onExaminationChange(clone(rowData))}>
@@ -105,6 +108,7 @@ export default class Home extends Component {
         <Text style={styles.previous}>Poprzednie</Text>
 
         <ListView
+          enableEmptySections={true}
           dataSource={this.state.examinationList}
           renderRow={(rowData) => (
             <TouchableHighlight
@@ -117,6 +121,7 @@ export default class Home extends Component {
           />
         <Button
           title="Zresetuj PIN"
+          color='black'
           onPress={this.props.onPinReset}
         ></Button>
       </View>

@@ -13,21 +13,6 @@ import {
 import {deleteFile} from '../Lib/Examination';
 
 
-const Footer = (props) => (
-  <View>
-    <Button
-      onPress={() => {
-        deleteFile(props.examination.filename)
-        props.onExaminationDelete()
-      }}
-      title="Usuń"
-      color="#841584"
-      accessibilityLabel="Usuń"
-      style={{margin: 20, width: 50}}
-    />
-  </View>
-);
-
 export default class ExaminationSummary extends Component {
   constructor(props) {
     super(props);
@@ -41,17 +26,25 @@ export default class ExaminationSummary extends Component {
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'center',
+        alignItems: 'center',
       }}>
 
         <Text style={styles.title}>{this.props.examination.name}</Text>
-        <Text style={{marginLeft: 10,}}>Twoje grzechy:</Text>
-        <ListView
-          dataSource={dataSource}
-          renderRow={(rowData) => <Text style={{marginLeft: 10,}}>{`\u2022 ${rowData.name}`}</Text>}
-          renderFooter={() =>
-            <Footer examination={this.props.examination} onExaminationDelete={this.props.onExaminationDelete}/>
-          }
+        <Text style={{margin: 10, textAlign: 'center', fontFamily: 'Augusta', fontSize: 40, color: 'black'}}>
+          # {this.props.examination.questions.filter((question) => question.sin).length}
+        </Text>
+        <Button
+          onPress={() => {
+            deleteFile(this.props.examination.filename)
+            this.props.onExaminationDelete()
+          }}
+          color='black'
+          title="Usuń ten rachunek"
+          accessibilityLabel="Usuń"
         />
+
+
+
       </View>
     );
   }

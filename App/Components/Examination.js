@@ -86,9 +86,10 @@ export default class Examinaton extends Component {
               </Text>
               <Button
                 onPress={() => {
-                  this.refs.swiper.scrollBy(total - index);
+                  this.refs.swiper.scrollBy(total - index - 1);
                 }}
                 title="Podsumowanie"
+                color="black"
                 accessibilityLabel="Podsumowanie"
               />
             </View>
