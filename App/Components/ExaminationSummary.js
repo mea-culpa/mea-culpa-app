@@ -19,8 +19,6 @@ export default class ExaminationSummary extends Component {
   }
 
   render() {
-    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-    const dataSource = ds.cloneWithRows(this.props.examination.questions.filter((question) => question.sin));
     return (
       <View style={{
         flex: 1,
