@@ -20,6 +20,5 @@ export function write(name, object) {
 }
 
 export function deleteFile(name) {
-  console.log("Deleting file", name);
   return RNFS.unlink(`${RNFS.DocumentDirectoryPath}/examinations/${name}.json`)
 }

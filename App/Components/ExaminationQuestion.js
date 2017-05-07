@@ -28,7 +28,6 @@ export default class ExaminationQuestion extends Component {
   setSin(sin) {
     let newQuestion = this.props.question;
     newQuestion.sin = sin;
-    console.log("setSin", this.props.question, newQuestion, this.key);
     this.props.onQuestionUpdate(this.key, newQuestion);
   };
 

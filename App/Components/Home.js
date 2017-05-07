@@ -74,7 +74,6 @@ export default class Home extends Component {
       this.setState({examinationTemplateList: dataSource.cloneWithRows(data)})
     })
     examinationList().then((data) => {
-      console.log("futer", data);
       this.setState({examinationList: dataSource.cloneWithRows((data))})
 
     })

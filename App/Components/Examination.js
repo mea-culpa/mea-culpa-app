@@ -19,7 +19,6 @@ export default class Examinaton extends Component {
     if (!this.props.examination.filename) {
       // set the filename
       let filename =  this.props.examination.name + "_" + new Date().getTime();
-      console.log("new filename", filename);
       const examination = this.props.examination;
       examination.filename = filename;
       this.props.onExaminationChange(examination);
@@ -103,7 +102,6 @@ export default class Examinaton extends Component {
   componentDidUpdate() {
     // write to file
     // Alert.alert("update", JSON.stringify(this.props.examination));
-    console.log("Save file", this.props.examination.filename);
     write(this.props.examination.filename, this.props.examination);
   }
 }
