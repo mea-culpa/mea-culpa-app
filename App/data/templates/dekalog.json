@@ -1,0 +1,76 @@
+{
+    "name": "Dekalog",
+    "description": "",
+    "questions": [
+      {
+        "category": "Dekalog",
+        "description": "Ja jestem Pan, twój Bóg, który cię wywiódł z ziemi egipskiej, z domu niewoli.",
+        "sin": false,
+        "name": "I. Nie będziesz miał cudzych bogów przede Mną.",
+        "notes": ""
+      },
+      {
+        "category": "Dekalog",
+        "description": "Ja jestem Pan, twój Bóg, który cię wywiódł z ziemi egipskiej, z domu niewoli.",
+        "sin": false,
+        "name": "II. Nie będziesz brał imienia Pana Boga twego nadaremno.",
+        "notes": ""
+      },
+      {
+        "category": "Dekalog",
+        "description": "Ja jestem Pan, twój Bóg, który cię wywiódł z ziemi egipskiej, z domu niewoli.",
+        "sin": false,
+        "name": "III. Pamiętaj, abyś dzień święty święcił.",
+        "notes": ""
+      },
+      {
+        "category": "Dekalog",
+        "description": "Ja jestem Pan, twój Bóg, który cię wywiódł z ziemi egipskiej, z domu niewoli.",
+        "sin": false,
+        "name": "IV. Czcij ojca swego i matkę swoją.",
+        "notes": ""
+      },
+      {
+        "category": "Dekalog",
+        "description": "Ja jestem Pan, twój Bóg, który cię wywiódł z ziemi egipskiej, z domu niewoli.",
+        "sin": false,
+        "name": "V. Nie zabijaj.",
+        "notes": ""
+      },
+      {
+        "category": "Dekalog",
+        "description": "Ja jestem Pan, twój Bóg, który cię wywiódł z ziemi egipskiej, z domu niewoli.",
+        "sin": false,
+        "name": "VI. Nie cudzołóż.",
+        "notes": ""
+      },
+      {
+        "category": "Dekalog",
+        "description": "Ja jestem Pan, twój Bóg, który cię wywiódł z ziemi egipskiej, z domu niewoli.",
+        "sin": false,
+        "name": "VII. Nie kradnij.",
+        "notes": ""
+      },
+      {
+        "category": "Dekalog",
+        "description": "Ja jestem Pan, twój Bóg, który cię wywiódł z ziemi egipskiej, z domu niewoli.",
+        "sin": false,
+        "name": "VIII. Nie mów fałszywego świadectwa przeciw bliźniemu swemu.",
+        "notes": ""
+      },
+      {
+        "category": "Dekalog",
+        "description": "Ja jestem Pan, twój Bóg, który cię wywiódł z ziemi egipskiej, z domu niewoli.",
+        "sin": false,
+        "name": "IX. Nie pożądaj żony bliźniego twego,",
+        "notes": ""
+      },
+      {
+        "category": "Dekalog",
+        "description": "Ja jestem Pan, twój Bóg, który cię wywiódł z ziemi egipskiej, z domu niewoli.",
+        "sin": false,
+        "name": "X. Ani żadnej rzeczy, która jego jest.",
+        "notes": ""
+      }
+    ]
+}
